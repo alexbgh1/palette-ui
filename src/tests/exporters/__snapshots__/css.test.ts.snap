@@ -1,0 +1,70 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`buildCss > snapshot: stable output against accidental changes 1`] = `
+"/* Light mode */
+:root {
+  --accent-1: #0c111c;
+  --accent-2: #111725;
+  --accent-3: #172448;
+  --accent-4: #1d2e61;
+  --accent-5: #253974;
+  --accent-6: #2e4484;
+  --accent-7: #375097;
+  --accent-8: #415eb1;
+  --accent-9: #3e63dd;
+  --accent-10: #3f5cb0;
+  --accent-11: #93b4ff;
+  --accent-12: #d5e2ff;
+  --accent-a1: #0012fb0c;
+  --accent-a2: #1156f916;
+  --accent-a3: #2b64ff3b;
+  --accent-a4: #3567ff56;
+  --accent-a5: #4171fd6b;
+  --accent-a6: #4d7afd7c;
+  --accent-a7: #5581ff90;
+  --accent-a8: #5883feac;
+  --accent-a9: #4671ffdb;
+  --accent-a10: #5580feab;
+  --accent-a11: #93b4ff;
+  --accent-a12: #d5e2ff;
+  --accent-p3-1: oklch(17.8% 0.0247 267);
+  --accent-p3-2: oklch(20.7% 0.0302 267);
+  --accent-p3-3: oklch(27.1% 0.0693 267);
+  --accent-p3-4: oklch(31.8% 0.0931 267);
+  --accent-p3-5: oklch(36.1% 0.1044 267);
+  --accent-p3-6: oklch(40.4% 0.1105 267);
+  --accent-p3-7: oklch(45% 0.1201 267);
+  --accent-p3-8: oklch(50.3% 0.1371 267);
+  --accent-p3-9: oklch(54.4% 0.191 267);
+  --accent-p3-10: oklch(49.7% 0.1371 267);
+  --accent-p3-11: oklch(77.7% 0.1232 267);
+  --accent-p3-12: oklch(91.1% 0.0428 267);
+  --gray-1: #111111;
+  --gray-2: #191919;
+  --gray-3: #222222;
+  --gray-4: #2a2a2a;
+  --gray-5: #313131;
+  --gray-6: #3a3a3a;
+  --gray-7: #484848;
+  --gray-8: #606060;
+  --gray-9: #6e6e6e;
+  --gray-10: #7c7c7c;
+  --gray-11: #b4b4b4;
+  --gray-12: #eeeeee;
+  --gray-a1: #00000000;
+  --gray-a2: #ffffff09;
+  --gray-a3: #ffffff12;
+  --gray-a4: #ffffff1b;
+  --gray-a5: #ffffff22;
+  --gray-a6: #ffffff2c;
+  --gray-a7: #ffffff3b;
+  --gray-a8: #ffffff55;
+  --gray-a9: #ffffff64;
+  --gray-a10: #ffffff73;
+  --gray-a11: #ffffffaf;
+  --gray-a12: #ffffffed;
+  --accent-contrast: #ffffff;
+  --accent-surface: #111d3980;
+  --background: #111111;
+}"
+`;

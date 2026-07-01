@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alexbgh1.github.io/palette-ui/sitemap.xml

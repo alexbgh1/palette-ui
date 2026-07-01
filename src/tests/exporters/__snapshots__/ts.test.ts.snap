@@ -1,0 +1,105 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`buildTs > snapshot non-semantic hex 1`] = `
+"// Light mode
+export const accent = {
+  '1': '#0c111c',
+  '2': '#111725',
+  '3': '#172448',
+  '4': '#1d2e61',
+  '5': '#253974',
+  '6': '#2e4484',
+  '7': '#375097',
+  '8': '#415eb1',
+  '9': '#3e63dd',
+  '10': '#3f5cb0',
+  '11': '#93b4ff',
+  '12': '#d5e2ff',
+};
+
+export const accentAlpha = {
+  'a1': '#0012fb0c',
+  'a2': '#1156f916',
+  'a3': '#2b64ff3b',
+  'a4': '#3567ff56',
+  'a5': '#4171fd6b',
+  'a6': '#4d7afd7c',
+  'a7': '#5581ff90',
+  'a8': '#5883feac',
+  'a9': '#4671ffdb',
+  'a10': '#5580feab',
+  'a11': '#93b4ff',
+  'a12': '#d5e2ff',
+};
+
+export const gray = {
+  '1': '#111111',
+  '2': '#191919',
+  '3': '#222222',
+  '4': '#2a2a2a',
+  '5': '#313131',
+  '6': '#3a3a3a',
+  '7': '#484848',
+  '8': '#606060',
+  '9': '#6e6e6e',
+  '10': '#7c7c7c',
+  '11': '#b4b4b4',
+  '12': '#eeeeee',
+};
+
+export const accentContrast = '#ffffff';
+export const accentSurface = '#111d3980';
+export const background = '#111111';"
+`;
+
+exports[`buildTs > snapshot semantic hex 1`] = `
+"// Light mode
+export const colors = {
+  'bg': '#0c111c',
+  'bg-subtle': '#111725',
+  'bg-interactive': '#172448',
+  'bg-hover': '#1d2e61',
+  'bg-active': '#253974',
+  'border-subtle': '#2e4484',
+  'border': '#375097',
+  'border-hover': '#415eb1',
+  'solid': '#3e63dd',
+  'solid-hover': '#3f5cb0',
+  'text': '#93b4ff',
+  'text-contrast': '#d5e2ff',
+};
+
+export const accentAlpha = {
+  'abg': '#0012fb0c',
+  'abg-subtle': '#1156f916',
+  'abg-interactive': '#2b64ff3b',
+  'abg-hover': '#3567ff56',
+  'abg-active': '#4171fd6b',
+  'aborder-subtle': '#4d7afd7c',
+  'aborder': '#5581ff90',
+  'aborder-hover': '#5883feac',
+  'asolid': '#4671ffdb',
+  'asolid-hover': '#5580feab',
+  'atext': '#93b4ff',
+  'atext-contrast': '#d5e2ff',
+};
+
+export const gray = {
+  'bg': '#111111',
+  'bg-subtle': '#191919',
+  'bg-interactive': '#222222',
+  'bg-hover': '#2a2a2a',
+  'bg-active': '#313131',
+  'border-subtle': '#3a3a3a',
+  'border': '#484848',
+  'border-hover': '#606060',
+  'solid': '#6e6e6e',
+  'solid-hover': '#7c7c7c',
+  'text': '#b4b4b4',
+  'text-contrast': '#eeeeee',
+};
+
+export const accentContrast = '#ffffff';
+export const accentSurface = '#111d3980';
+export const background = '#111111';"
+`;

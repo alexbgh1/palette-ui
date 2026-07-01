@@ -1,0 +1,173 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`buildTailwindV4 / snapshots > non-semantic hex 1`] = `
+"/* Light mode */
+@theme {
+  --color-accent-1: #0c111c;
+  --color-accent-2: #111725;
+  --color-accent-3: #172448;
+  --color-accent-4: #1d2e61;
+  --color-accent-5: #253974;
+  --color-accent-6: #2e4484;
+  --color-accent-7: #375097;
+  --color-accent-8: #415eb1;
+  --color-accent-9: #3e63dd;
+  --color-accent-10: #3f5cb0;
+  --color-accent-11: #93b4ff;
+  --color-accent-12: #d5e2ff;
+  --color-accent-a1: #0012fb0c;
+  --color-accent-a2: #1156f916;
+  --color-accent-a3: #2b64ff3b;
+  --color-accent-a4: #3567ff56;
+  --color-accent-a5: #4171fd6b;
+  --color-accent-a6: #4d7afd7c;
+  --color-accent-a7: #5581ff90;
+  --color-accent-a8: #5883feac;
+  --color-accent-a9: #4671ffdb;
+  --color-accent-a10: #5580feab;
+  --color-accent-a11: #93b4ff;
+  --color-accent-a12: #d5e2ff;
+  --color-gray-1: #111111;
+  --color-gray-2: #191919;
+  --color-gray-3: #222222;
+  --color-gray-4: #2a2a2a;
+  --color-gray-5: #313131;
+  --color-gray-6: #3a3a3a;
+  --color-gray-7: #484848;
+  --color-gray-8: #606060;
+  --color-gray-9: #6e6e6e;
+  --color-gray-10: #7c7c7c;
+  --color-gray-11: #b4b4b4;
+  --color-gray-12: #eeeeee;
+  --color-background: #111111;
+}"
+`;
+
+exports[`buildTailwindV4 / snapshots > non-semantic rgb raw 1`] = `
+"/* Light mode */
+@theme {
+  --color-accent-1: rgb(var(--color-accent-1) / <alpha-value>);
+  --color-accent-2: rgb(var(--color-accent-2) / <alpha-value>);
+  --color-accent-3: rgb(var(--color-accent-3) / <alpha-value>);
+  --color-accent-4: rgb(var(--color-accent-4) / <alpha-value>);
+  --color-accent-5: rgb(var(--color-accent-5) / <alpha-value>);
+  --color-accent-6: rgb(var(--color-accent-6) / <alpha-value>);
+  --color-accent-7: rgb(var(--color-accent-7) / <alpha-value>);
+  --color-accent-8: rgb(var(--color-accent-8) / <alpha-value>);
+  --color-accent-9: rgb(var(--color-accent-9) / <alpha-value>);
+  --color-accent-10: rgb(var(--color-accent-10) / <alpha-value>);
+  --color-accent-11: rgb(var(--color-accent-11) / <alpha-value>);
+  --color-accent-12: rgb(var(--color-accent-12) / <alpha-value>);
+  --color-accent-a1: 0 18 251 / 0.047;
+  --color-accent-a2: 17 86 249 / 0.086;
+  --color-accent-a3: 43 100 255 / 0.231;
+  --color-accent-a4: 53 103 255 / 0.337;
+  --color-accent-a5: 65 113 253 / 0.420;
+  --color-accent-a6: 77 122 253 / 0.486;
+  --color-accent-a7: 85 129 255 / 0.565;
+  --color-accent-a8: 88 131 254 / 0.675;
+  --color-accent-a9: 70 113 255 / 0.859;
+  --color-accent-a10: 85 128 254 / 0.671;
+  --color-accent-a11: 147 180 255;
+  --color-accent-a12: 213 226 255;
+  --color-gray-1: rgb(var(--color-gray-1) / <alpha-value>);
+  --color-gray-2: rgb(var(--color-gray-2) / <alpha-value>);
+  --color-gray-3: rgb(var(--color-gray-3) / <alpha-value>);
+  --color-gray-4: rgb(var(--color-gray-4) / <alpha-value>);
+  --color-gray-5: rgb(var(--color-gray-5) / <alpha-value>);
+  --color-gray-6: rgb(var(--color-gray-6) / <alpha-value>);
+  --color-gray-7: rgb(var(--color-gray-7) / <alpha-value>);
+  --color-gray-8: rgb(var(--color-gray-8) / <alpha-value>);
+  --color-gray-9: rgb(var(--color-gray-9) / <alpha-value>);
+  --color-gray-10: rgb(var(--color-gray-10) / <alpha-value>);
+  --color-gray-11: rgb(var(--color-gray-11) / <alpha-value>);
+  --color-gray-12: rgb(var(--color-gray-12) / <alpha-value>);
+  --color-background: 17 17 17;
+}"
+`;
+
+exports[`buildTailwindV4 / snapshots > semantic hex 1`] = `
+"/* Light mode */
+@theme {
+  --color-accent-bg: #0c111c;
+  --color-accent-bg-subtle: #111725;
+  --color-accent-bg-interactive: #172448;
+  --color-accent-bg-hover: #1d2e61;
+  --color-accent-bg-active: #253974;
+  --color-accent-border-subtle: #2e4484;
+  --color-accent-border: #375097;
+  --color-accent-border-hover: #415eb1;
+  --color-accent-solid: #3e63dd;
+  --color-accent-solid-hover: #3f5cb0;
+  --color-accent-text: #93b4ff;
+  --color-accent-text-contrast: #d5e2ff;
+  --color-accent-abg: #0012fb0c;
+  --color-accent-abg-subtle: #1156f916;
+  --color-accent-abg-interactive: #2b64ff3b;
+  --color-accent-abg-hover: #3567ff56;
+  --color-accent-abg-active: #4171fd6b;
+  --color-accent-aborder-subtle: #4d7afd7c;
+  --color-accent-aborder: #5581ff90;
+  --color-accent-aborder-hover: #5883feac;
+  --color-accent-asolid: #4671ffdb;
+  --color-accent-asolid-hover: #5580feab;
+  --color-accent-atext: #93b4ff;
+  --color-accent-atext-contrast: #d5e2ff;
+  --color-gray-bg: #111111;
+  --color-gray-bg-subtle: #191919;
+  --color-gray-bg-interactive: #222222;
+  --color-gray-bg-hover: #2a2a2a;
+  --color-gray-bg-active: #313131;
+  --color-gray-border-subtle: #3a3a3a;
+  --color-gray-border: #484848;
+  --color-gray-border-hover: #606060;
+  --color-gray-solid: #6e6e6e;
+  --color-gray-solid-hover: #7c7c7c;
+  --color-gray-text: #b4b4b4;
+  --color-gray-text-contrast: #eeeeee;
+  --color-background: #111111;
+}"
+`;
+
+exports[`buildTailwindV4 / snapshots > semantic rgb raw 1`] = `
+"/* Light mode */
+@theme {
+  --color-accent-bg: rgb(var(--color-accent-bg) / <alpha-value>);
+  --color-accent-bg-subtle: rgb(var(--color-accent-bg-subtle) / <alpha-value>);
+  --color-accent-bg-interactive: rgb(var(--color-accent-bg-interactive) / <alpha-value>);
+  --color-accent-bg-hover: rgb(var(--color-accent-bg-hover) / <alpha-value>);
+  --color-accent-bg-active: rgb(var(--color-accent-bg-active) / <alpha-value>);
+  --color-accent-border-subtle: rgb(var(--color-accent-border-subtle) / <alpha-value>);
+  --color-accent-border: rgb(var(--color-accent-border) / <alpha-value>);
+  --color-accent-border-hover: rgb(var(--color-accent-border-hover) / <alpha-value>);
+  --color-accent-solid: rgb(var(--color-accent-solid) / <alpha-value>);
+  --color-accent-solid-hover: rgb(var(--color-accent-solid-hover) / <alpha-value>);
+  --color-accent-text: rgb(var(--color-accent-text) / <alpha-value>);
+  --color-accent-text-contrast: rgb(var(--color-accent-text-contrast) / <alpha-value>);
+  --color-accent-abg: 0 18 251 / 0.047;
+  --color-accent-abg-subtle: 17 86 249 / 0.086;
+  --color-accent-abg-interactive: 43 100 255 / 0.231;
+  --color-accent-abg-hover: 53 103 255 / 0.337;
+  --color-accent-abg-active: 65 113 253 / 0.420;
+  --color-accent-aborder-subtle: 77 122 253 / 0.486;
+  --color-accent-aborder: 85 129 255 / 0.565;
+  --color-accent-aborder-hover: 88 131 254 / 0.675;
+  --color-accent-asolid: 70 113 255 / 0.859;
+  --color-accent-asolid-hover: 85 128 254 / 0.671;
+  --color-accent-atext: 147 180 255;
+  --color-accent-atext-contrast: 213 226 255;
+  --color-gray-bg: rgb(var(--color-gray-bg) / <alpha-value>);
+  --color-gray-bg-subtle: rgb(var(--color-gray-bg-subtle) / <alpha-value>);
+  --color-gray-bg-interactive: rgb(var(--color-gray-bg-interactive) / <alpha-value>);
+  --color-gray-bg-hover: rgb(var(--color-gray-bg-hover) / <alpha-value>);
+  --color-gray-bg-active: rgb(var(--color-gray-bg-active) / <alpha-value>);
+  --color-gray-border-subtle: rgb(var(--color-gray-border-subtle) / <alpha-value>);
+  --color-gray-border: rgb(var(--color-gray-border) / <alpha-value>);
+  --color-gray-border-hover: rgb(var(--color-gray-border-hover) / <alpha-value>);
+  --color-gray-solid: rgb(var(--color-gray-solid) / <alpha-value>);
+  --color-gray-solid-hover: rgb(var(--color-gray-solid-hover) / <alpha-value>);
+  --color-gray-text: rgb(var(--color-gray-text) / <alpha-value>);
+  --color-gray-text-contrast: rgb(var(--color-gray-text-contrast) / <alpha-value>);
+  --color-background: 17 17 17;
+}"
+`;

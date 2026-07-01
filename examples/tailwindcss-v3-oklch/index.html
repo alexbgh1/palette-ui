@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind v3 + OKLCH — Semantic components</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontSize: {
+              "2xs": ["10px", { lineHeight: "14px" }],
+              "3xs": ["9px", { lineHeight: "12px" }],
+              "4xs": ["8px", { lineHeight: "10px" }],
+            },
+            colors: {
+              accent: {
+                bg: "var(--accent-bg)",
+                "bg-subtle": "var(--accent-bg-subtle)",
+                "bg-interactive": "var(--accent-bg-interactive)",
+                "bg-hover": "var(--accent-bg-hover)",
+                "bg-active": "var(--accent-bg-active)",
+                "border-subtle": "var(--accent-border-subtle)",
+                border: "var(--accent-border)",
+                "border-hover": "var(--accent-border-hover)",
+                solid: "var(--accent-solid)",
+                "solid-hover": "var(--accent-solid-hover)",
+                text: "var(--accent-text)",
+                "text-contrast": "var(--accent-text-contrast)",
+                abg: "var(--accent-abg)",
+                "abg-subtle": "var(--accent-abg-subtle)",
+                "abg-interactive": "var(--accent-abg-interactive)",
+                "abg-hover": "var(--accent-abg-hover)",
+                "abg-active": "var(--accent-abg-active)",
+                "aborder-subtle": "var(--accent-aborder-subtle)",
+                aborder: "var(--accent-aborder)",
+                "aborder-hover": "var(--accent-aborder-hover)",
+                asolid: "var(--accent-asolid)",
+                "asolid-hover": "var(--accent-asolid-hover)",
+                atext: "var(--accent-atext)",
+                "atext-contrast": "var(--accent-atext-contrast)",
+              },
+              gray: {
+                bg: "var(--gray-bg)",
+                "bg-subtle": "var(--gray-bg-subtle)",
+                "bg-interactive": "var(--gray-bg-interactive)",
+                "bg-hover": "var(--gray-bg-hover)",
+                "bg-active": "var(--gray-bg-active)",
+                "border-subtle": "var(--gray-border-subtle)",
+                border: "var(--gray-border)",
+                "border-hover": "var(--gray-border-hover)",
+                solid: "var(--gray-solid)",
+                "solid-hover": "var(--gray-solid-hover)",
+                text: "var(--gray-text)",
+                "text-contrast": "var(--gray-text-contrast)",
+              },
+              background: "var(--background)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --accent-bg: oklch(99.3% 0.004 314.8);
+        --accent-bg-subtle: oklch(98.3% 0.01 305.4);
+        --accent-bg-interactive: oklch(95.6% 0.027 309.2);
+        --accent-bg-hover: oklch(93% 0.045 309.9);
+        --accent-bg-active: oklch(90% 0.06 308.2);
+        --accent-border-subtle: oklch(86% 0.076 308.3);
+        --accent-border: oklch(80.7% 0.098 308.4);
+        --accent-border-hover: oklch(73.9% 0.129 308.9);
+        --accent-solid: oklch(63.1% 0.199 308.7);
+        --accent-solid-hover: oklch(59% 0.198 308.6);
+        --accent-text: oklch(51.9% 0.185 308.5);
+        --accent-text-contrast: oklch(33.3% 0.129 308.7);
+        --accent-abg: oklch(58.1% 0.299 307 / 0.012);
+        --accent-abg-subtle: oklch(51.2% 0.293 288 / 0.027);
+        --accent-abg-interactive: oklch(53.8% 0.294 296.2 / 0.075);
+        --accent-abg-hover: oklch(54.4% 0.294 297.8 / 0.122);
+        --accent-abg-active: oklch(51.6% 0.283 294.9 / 0.169);
+        --accent-aborder-subtle: oklch(48.8% 0.267 295.7 / 0.231);
+        --accent-aborder: oklch(46.8% 0.255 296.7 / 0.314);
+        --accent-aborder-hover: oklch(45.7% 0.246 298.6 / 0.424);
+        --accent-asolid: oklch(48.2% 0.256 300.9 / 0.627);
+        --accent-asolid-hover: oklch(45.3% 0.24 301.7 / 0.678);
+        --accent-atext: oklch(39.6% 0.209 302.4 / 0.749);
+        --accent-atext-contrast: oklch(25.9% 0.134 305.7 / 0.894);
+        --gray-bg: oklch(99.1% 0 0);
+        --gray-bg-subtle: oklch(98.2% 0 0);
+        --gray-bg-interactive: oklch(95.5% 0 0);
+        --gray-bg-hover: oklch(93.1% 0 0);
+        --gray-bg-active: oklch(91% 0 0);
+        --gray-border-subtle: oklch(88.5% 0 0);
+        --gray-border: oklch(85.1% 0 0);
+        --gray-border-hover: oklch(79.2% 0 0);
+        --gray-solid: oklch(64.3% 0 0);
+        --gray-solid-hover: oklch(60.7% 0 0);
+        --gray-text: oklch(50.3% 0 0);
+        --gray-text-contrast: oklch(24.4% 0 0);
+        --background: oklch(100% 0 0);
+      }
+      .dark {
+        --accent-bg: oklch(16.9% 0.02 227.6);
+        --accent-bg-subtle: oklch(20.9% 0.022 228.9);
+        --accent-bg-interactive: oklch(27.1% 0.052 229.7);
+        --accent-bg-hover: oklch(31.8% 0.068 235.6);
+        --accent-bg-active: oklch(36.5% 0.077 235);
+        --accent-border-subtle: oklch(41.6% 0.085 232.3);
+        --accent-border: oklch(47.8% 0.095 230);
+        --accent-border-hover: oklch(55.6% 0.112 230.6);
+        --accent-solid: oklch(68.8% 0.137 230.2);
+        --accent-solid-hover: oklch(65.3% 0.132 231.4);
+        --accent-text: oklch(78.1% 0.126 230.5);
+        --accent-text-contrast: oklch(90.8% 0.058 227.6);
+        --accent-abg: oklch(50.7% 0.247 262.6 / 0.031);
+        --accent-abg-subtle: oklch(68.5% 0.162 241.8 / 0.075);
+        --accent-abg-interactive: oklch(70% 0.169 243.1 / 0.184);
+        --accent-abg-hover: oklch(68.5% 0.173 245 / 0.275);
+        --accent-abg-active: oklch(70.4% 0.167 241.9 / 0.345);
+        --accent-aborder-subtle: oklch(72.7% 0.159 237.1 / 0.416);
+        --accent-aborder: oklch(74.6% 0.156 233.8 / 0.506);
+        --accent-aborder-hover: oklch(75.1% 0.155 232.7 / 0.639);
+        --accent-asolid: oklch(76% 0.152 230.5 / 0.867);
+        --accent-asolid-hover: oklch(75% 0.154 232.3 / 0.816);
+        --accent-atext: oklch(79.6% 0.128 230.3 / 0.976);
+        --accent-atext-contrast: oklch(90.8% 0.058 227.6);
+        --gray-bg: oklch(16.9% 0.002 286.2);
+        --gray-bg-subtle: oklch(21% 0.004 286.1);
+        --gray-bg-interactive: oklch(25.3% 0.004 286.1);
+        --gray-bg-hover: oklch(28.2% 0.005 286);
+        --gray-bg-active: oklch(31% 0.005 286.1);
+        --gray-border-subtle: oklch(34.6% 0.005 286.1);
+        --gray-border: oklch(39.9% 0.005 286.2);
+        --gray-border-hover: oklch(49% 0.005 286.2);
+        --gray-solid: oklch(53.6% 0.005 286.2);
+        --gray-solid-hover: oklch(58.1% 0.006 286.2);
+        --gray-text: oklch(76.8% 0.006 286.3);
+        --gray-text-contrast: oklch(94.9% 0.001 286.4);
+        --background: oklch(16.8% 0 0);
+      }
+    </style>
+  </head>
+  <body class="bg-background text-gray-text min-h-screen transition-colors duration-300">
+    <div class="mx-auto max-w-2xl p-6 space-y-6">
+      <!-- Header + theme toggle -->
+      <div class="flex items-center justify-between">
+        <h1 class="text-sm font-semibold text-gray-text-contrast">OKLCH Semantic Demo</h1>
+        <button
+          id="toggle"
+          class="bg-gray-bg-interactive hover:bg-gray-bg-hover text-gray-text-contrast px-3 py-1.5 rounded-md text-xs font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-aborder-hover focus-visible:ring-offset-2 focus-visible:ring-offset-gray-bg"
+        >
+          Toggle theme
+        </button>
+      </div>
+
+      <!-- Card -->
+      <div class="rounded-xl border border-gray-border-subtle bg-gray-bg shadow-sm p-4 space-y-4">
+        <div class="space-y-1">
+          <h2 class="text-sm font-semibold text-gray-text-contrast">Create project</h2>
+          <p class="text-xs text-gray-text">Deploy a new repository to your infrastructure.</p>
+        </div>
+
+        <!-- Card inside card -->
+        <div class="rounded-lg border border-accent-border-subtle bg-accent-bg-subtle p-3 space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-full text-2xs font-medium bg-accent-bg-hover text-accent-text"
+              >Preview</span
+            >
+            <span class="px-2 py-0.5 rounded-full text-2xs font-medium bg-gray-bg-interactive text-gray-text"
+              >OKLCH</span
+            >
+          </div>
+
+          <!-- Checkbox -->
+          <label class="flex items-center gap-2 cursor-pointer">
+            <button
+              type="button"
+              role="checkbox"
+              aria-checked="true"
+              id="cb-deploy"
+              class="flex items-center justify-center w-4 h-4 rounded bg-accent-solid border border-accent-solid shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-aborder-hover focus-visible:ring-offset-2 focus-visible:ring-offset-accent-bg-subtle"
+            >
+              <svg class="w-3 h-3 text-white pointer-events-none" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path
+                  d="M3 6l2 2 4-4"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <span class="text-xs text-accent-text-contrast select-none">Auto-deploy on push</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer">
+            <button
+              type="button"
+              role="checkbox"
+              aria-checked="false"
+              id="cb-ssl"
+              class="flex items-center justify-center w-4 h-4 rounded bg-transparent border border-gray-border shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-aborder-hover focus-visible:ring-offset-2 focus-visible:ring-offset-accent-bg-subtle"
+            ></button>
+            <span class="text-xs text-accent-text select-none">Enable SSL</span>
+          </label>
+        </div>
+
+        <!-- Grid Cards Variations -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Callout -->
+          <div class="rounded-lg border border-accent-border-subtle bg-accent-bg-subtle p-3 space-y-2">
+            <div class="border-l-4 border-accent-border bg-accent-bg p-2 rounded space-y-1">
+              <h3 class="text-xs font-semibold text-accent-text">Note</h3>
+              <p class="text-2xs text-accent-text">
+                Use <code class="font-mono text-accent-text-contrast">accent-*</code> tokens.
+              </p>
+            </div>
+          </div>
+
+          <!-- User row (simplified) -->
+          <div class="rounded-lg border border-gray-border-subtle bg-gray-bg-subtle p-3 space-y-2">
+            <div class="flex items-center gap-2 min-w-0">
+              <div
+                class="w-7 h-7 rounded-full flex items-center justify-center text-3xs font-bold bg-accent-bg-hover text-accent-text shrink-0"
+              >
+                EA
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-medium text-gray-text-contrast truncate">Emily Adams</p>
+                <p class="text-3xs text-gray-text truncate">emily@example.com</p>
+              </div>
+              <span
+                class="text-4xs font-mono uppercase tracking-wider px-1 py-0.5 rounded bg-gray-bg-interactive text-gray-text shrink-0 ml-auto"
+                >Admin</span
+              >
+            </div>
+            <blockquote class="pl-3 border-l-2 border-gray-border-hover text-2xs leading-relaxed text-gray-text">
+              "Roses are red, violets are blue..."
+            </blockquote>
+          </div>
+
+          <!-- 3 levels of bg depth -->
+          <div class="rounded-lg border border-gray-border-subtle bg-gray-bg-subtle p-3 space-y-2">
+            <h3 class="text-xs font-semibold text-gray-text-contrast">Depth: bg → subtle → accent</h3>
+            <div class="rounded border border-accent-border-subtle bg-accent-bg p-2.5 space-y-1.5">
+              <p class="text-2xs text-accent-text-contrast font-medium">Level 2 — accent-bg</p>
+              <div class="rounded border border-gray-border-subtle bg-accent-bg-subtle p-2">
+                <p class="text-3xs text-accent-text">Level 3 — accent-bg-subtle</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex items-center gap-2 pt-2">
+          <button
+            class="bg-accent-solid hover:bg-accent-solid-hover text-white px-3 py-1.5 rounded-md text-xs font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-aborder-hover focus-visible:ring-offset-2 focus-visible:ring-offset-gray-bg"
+          >
+            Deploy
+          </button>
+          <button
+            class="bg-gray-bg-interactive hover:bg-gray-bg-hover text-gray-text-contrast px-3 py-1.5 rounded-md text-xs font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-aborder-hover focus-visible:ring-offset-2 focus-visible:ring-offset-gray-bg"
+          >
+            Cancel
+          </button>
+          <button
+            class="bg-transparent hover:bg-accent-abg-interactive text-accent-text px-3 py-1.5 rounded-md text-xs font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-aborder-hover focus-visible:ring-offset-2 focus-visible:ring-offset-gray-bg"
+          >
+            Learn more
+          </button>
+        </div>
+      </div>
+
+      <!-- Gray-only depth card -->
+      <div class="rounded-xl border border-gray-border-subtle bg-gray-bg shadow-sm p-4 space-y-3">
+        <h2 class="text-sm font-semibold text-gray-text-contrast">Gray-only depth</h2>
+        <div class="rounded-lg border border-gray-border-subtle bg-gray-bg-subtle p-3 space-y-2">
+          <p class="text-xs text-gray-text-contrast font-medium">Level 2 — gray-bg-subtle</p>
+          <div class="rounded border border-gray-border bg-gray-bg-interactive p-2 space-y-1">
+            <p class="text-2xs text-gray-text-contrast">Level 3 — gray-bg-interactive</p>
+            <p class="text-3xs text-gray-text">Step 3 as nested surface</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accent-only depth card -->
+      <div class="rounded-xl border border-gray-aborder-subtle bg-accent-bg shadow-sm p-4 space-y-3">
+        <h2 class="text-sm font-semibold text-accent-text-contrast">Accent-only depth</h2>
+        <div class="rounded-lg border border-gray-aborder-subtle bg-accent-bg-subtle p-3 space-y-2">
+          <p class="text-xs text-accent-text-contrast font-medium">Level 2 — accent-bg-subtle</p>
+          <div class="rounded border border-accent-border bg-accent-bg-interactive p-2 space-y-1">
+            <p class="text-2xs text-accent-text-contrast">Level 3 — accent-bg-interactive</p>
+            <p class="text-3xs text-accent-text">Step 3 as nested surface</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("toggle").addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>

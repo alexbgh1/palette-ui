@@ -1,0 +1,217 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`buildTailwindV3 / snapshots > non-semantic hex 1`] = `
+"// Light mode
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        accent: {
+      1: '#0c111c',
+      2: '#111725',
+      3: '#172448',
+      4: '#1d2e61',
+      5: '#253974',
+      6: '#2e4484',
+      7: '#375097',
+      8: '#415eb1',
+      9: '#3e63dd',
+      10: '#3f5cb0',
+      11: '#93b4ff',
+      12: '#d5e2ff',
+      a1: '#0012fb0c',
+      a2: '#1156f916',
+      a3: '#2b64ff3b',
+      a4: '#3567ff56',
+      a5: '#4171fd6b',
+      a6: '#4d7afd7c',
+      a7: '#5581ff90',
+      a8: '#5883feac',
+      a9: '#4671ffdb',
+      a10: '#5580feab',
+      a11: '#93b4ff',
+      a12: '#d5e2ff'
+        },
+        gray: {
+      1: '#111111',
+      2: '#191919',
+      3: '#222222',
+      4: '#2a2a2a',
+      5: '#313131',
+      6: '#3a3a3a',
+      7: '#484848',
+      8: '#606060',
+      9: '#6e6e6e',
+      10: '#7c7c7c',
+      11: '#b4b4b4',
+      12: '#eeeeee'
+        },
+        background: '#111111',
+      },
+    },
+  },
+};"
+`;
+
+exports[`buildTailwindV3 / snapshots > non-semantic rgb raw 1`] = `
+"// Light mode
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        accent: {
+      1: rgb(var(--accent-1) / <alpha-value>),
+      2: rgb(var(--accent-2) / <alpha-value>),
+      3: rgb(var(--accent-3) / <alpha-value>),
+      4: rgb(var(--accent-4) / <alpha-value>),
+      5: rgb(var(--accent-5) / <alpha-value>),
+      6: rgb(var(--accent-6) / <alpha-value>),
+      7: rgb(var(--accent-7) / <alpha-value>),
+      8: rgb(var(--accent-8) / <alpha-value>),
+      9: rgb(var(--accent-9) / <alpha-value>),
+      10: rgb(var(--accent-10) / <alpha-value>),
+      11: rgb(var(--accent-11) / <alpha-value>),
+      12: rgb(var(--accent-12) / <alpha-value>),
+      a1: 'rgb(0 18 251 / 0.047)',
+      a2: 'rgb(17 86 249 / 0.086)',
+      a3: 'rgb(43 100 255 / 0.231)',
+      a4: 'rgb(53 103 255 / 0.337)',
+      a5: 'rgb(65 113 253 / 0.420)',
+      a6: 'rgb(77 122 253 / 0.486)',
+      a7: 'rgb(85 129 255 / 0.565)',
+      a8: 'rgb(88 131 254 / 0.675)',
+      a9: 'rgb(70 113 255 / 0.859)',
+      a10: 'rgb(85 128 254 / 0.671)',
+      a11: 'rgb(147 180 255)',
+      a12: 'rgb(213 226 255)'
+        },
+        gray: {
+      1: rgb(var(--gray-1) / <alpha-value>),
+      2: rgb(var(--gray-2) / <alpha-value>),
+      3: rgb(var(--gray-3) / <alpha-value>),
+      4: rgb(var(--gray-4) / <alpha-value>),
+      5: rgb(var(--gray-5) / <alpha-value>),
+      6: rgb(var(--gray-6) / <alpha-value>),
+      7: rgb(var(--gray-7) / <alpha-value>),
+      8: rgb(var(--gray-8) / <alpha-value>),
+      9: rgb(var(--gray-9) / <alpha-value>),
+      10: rgb(var(--gray-10) / <alpha-value>),
+      11: rgb(var(--gray-11) / <alpha-value>),
+      12: rgb(var(--gray-12) / <alpha-value>)
+        },
+        background: 'rgb(17 17 17)',
+      },
+    },
+  },
+};"
+`;
+
+exports[`buildTailwindV3 / snapshots > semantic hex 1`] = `
+"// Light mode
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        accent: {
+      bg: '#0c111c',
+      'bg-subtle': '#111725',
+      'bg-interactive': '#172448',
+      'bg-hover': '#1d2e61',
+      'bg-active': '#253974',
+      'border-subtle': '#2e4484',
+      border: '#375097',
+      'border-hover': '#415eb1',
+      solid: '#3e63dd',
+      'solid-hover': '#3f5cb0',
+      text: '#93b4ff',
+      'text-contrast': '#d5e2ff',
+      abg: '#0012fb0c',
+      'abg-subtle': '#1156f916',
+      'abg-interactive': '#2b64ff3b',
+      'abg-hover': '#3567ff56',
+      'abg-active': '#4171fd6b',
+      'aborder-subtle': '#4d7afd7c',
+      aborder: '#5581ff90',
+      'aborder-hover': '#5883feac',
+      asolid: '#4671ffdb',
+      'asolid-hover': '#5580feab',
+      atext: '#93b4ff',
+      'atext-contrast': '#d5e2ff'
+        },
+        gray: {
+      bg: '#111111',
+      'bg-subtle': '#191919',
+      'bg-interactive': '#222222',
+      'bg-hover': '#2a2a2a',
+      'bg-active': '#313131',
+      'border-subtle': '#3a3a3a',
+      border: '#484848',
+      'border-hover': '#606060',
+      solid: '#6e6e6e',
+      'solid-hover': '#7c7c7c',
+      text: '#b4b4b4',
+      'text-contrast': '#eeeeee'
+        },
+        background: '#111111',
+      },
+    },
+  },
+};"
+`;
+
+exports[`buildTailwindV3 / snapshots > semantic rgb raw 1`] = `
+"// Light mode
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        accent: {
+      bg: rgb(var(--color-bg) / <alpha-value>),
+      'bg-subtle': rgb(var(--color-bg-subtle) / <alpha-value>),
+      'bg-interactive': rgb(var(--color-bg-interactive) / <alpha-value>),
+      'bg-hover': rgb(var(--color-bg-hover) / <alpha-value>),
+      'bg-active': rgb(var(--color-bg-active) / <alpha-value>),
+      'border-subtle': rgb(var(--color-border-subtle) / <alpha-value>),
+      border: rgb(var(--color-border) / <alpha-value>),
+      'border-hover': rgb(var(--color-border-hover) / <alpha-value>),
+      solid: rgb(var(--color-solid) / <alpha-value>),
+      'solid-hover': rgb(var(--color-solid-hover) / <alpha-value>),
+      text: rgb(var(--color-text) / <alpha-value>),
+      'text-contrast': rgb(var(--color-text-contrast) / <alpha-value>),
+      abg: 'rgb(0 18 251 / 0.047)',
+      'abg-subtle': 'rgb(17 86 249 / 0.086)',
+      'abg-interactive': 'rgb(43 100 255 / 0.231)',
+      'abg-hover': 'rgb(53 103 255 / 0.337)',
+      'abg-active': 'rgb(65 113 253 / 0.420)',
+      'aborder-subtle': 'rgb(77 122 253 / 0.486)',
+      aborder: 'rgb(85 129 255 / 0.565)',
+      'aborder-hover': 'rgb(88 131 254 / 0.675)',
+      asolid: 'rgb(70 113 255 / 0.859)',
+      'asolid-hover': 'rgb(85 128 254 / 0.671)',
+      atext: 'rgb(147 180 255)',
+      'atext-contrast': 'rgb(213 226 255)'
+        },
+        gray: {
+      bg: rgb(var(--gray-1) / <alpha-value>),
+      'bg-subtle': rgb(var(--gray-2) / <alpha-value>),
+      'bg-interactive': rgb(var(--gray-3) / <alpha-value>),
+      'bg-hover': rgb(var(--gray-4) / <alpha-value>),
+      'bg-active': rgb(var(--gray-5) / <alpha-value>),
+      'border-subtle': rgb(var(--gray-6) / <alpha-value>),
+      border: rgb(var(--gray-7) / <alpha-value>),
+      'border-hover': rgb(var(--gray-8) / <alpha-value>),
+      solid: rgb(var(--gray-9) / <alpha-value>),
+      'solid-hover': rgb(var(--gray-10) / <alpha-value>),
+      text: rgb(var(--gray-11) / <alpha-value>),
+      'text-contrast': rgb(var(--gray-12) / <alpha-value>)
+        },
+        background: 'rgb(17 17 17)',
+      },
+    },
+  },
+};"
+`;
