@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Palette UI | Accessible Color System Generator</title>
+    <meta name="title" content="Palette UI | Accessible Color System Generator" />
+    <meta
+      name="description"
+      content="Generate, customize, and preview accessible color palettes based on the Radix UI color system. Export CSS variables and check WCAG contrast."
+    />
+    <meta
+      name="keywords"
+      content="color palette, radix ui, color generator, oklch, css variables, accessibility, wcag contrast, web design, ui colors"
+    />
+    <meta name="author" content="Palette UI" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alexbgh1.github.io/palette-ui/" />
+    <meta property="og:title" content="Palette UI | Accessible Color System Generator" />
+    <meta
+      property="og:description"
+      content="Generate, customize, and preview accessible color palettes based on the Radix UI color system. Export CSS variables and check WCAG contrast."
+    />
+    <meta property="og:image" content="https://alexbgh1.github.io/palette-ui/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://alexbgh1.github.io/palette-ui/" />
+    <meta property="twitter:title" content="Palette UI | Accessible Color System Generator" />
+    <meta
+      property="twitter:description"
+      content="Generate, customize, and preview accessible color palettes based on the Radix UI color system. Export CSS variables and check WCAG contrast."
+    />
+    <meta property="twitter:image" content="https://alexbgh1.github.io/palette-ui/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/palette-ui/favicon.svg" />
+
+    <script>
+      (function () {
+        var FALLBACK_DARK_BG = "#111111";
+        var FALLBACK_LIGHT_BG = "#ffffff";
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var raw = localStorage.getItem("palette-ui-state");
+          var ls = raw ? JSON.parse(raw) : null;
+
+          var mode = params.get("mode") || (ls && ls.mode) || "light";
+          mode = mode === "dark" ? "dark" : "light";
+
+          var bgKey = "bg-" + mode;
+          var bg = params.get(bgKey) || (ls && ls[bgKey]) || null;
+
+          var color = bg ? "#" + bg.replace(/^#/, "") : mode === "dark" ? FALLBACK_DARK_BG : FALLBACK_LIGHT_BG;
+
+          document.documentElement.style.backgroundColor = color;
+          document.documentElement.style.colorScheme = mode;
+        } catch (e) {
+          document.documentElement.style.backgroundColor = FALLBACK_DARK_BG;
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/palette-ui/assets/index-DbYhwZdA.js"></script>
+    <link rel="stylesheet" crossorigin href="/palette-ui/assets/index-D4GAsZi0.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
