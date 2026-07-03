@@ -1,8 +1,8 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`buildCss > snapshot: stable output against accidental changes 1`] = `
+exports[`buildCss / snapshots > snapshot: matches the exact output format for non-semantic hex 1`] = `
 "/* Light mode */
-:root {
+:root, .light, .light-theme {
   --accent-1: #0c111c;
   --accent-2: #111725;
   --accent-3: #172448;
@@ -66,5 +66,74 @@ exports[`buildCss > snapshot: stable output against accidental changes 1`] = `
   --accent-contrast: #ffffff;
   --accent-surface: #111d3980;
   --background: #111111;
+}"
+`;
+
+exports[`buildCss / snapshots > snapshot: matches the exact output format for semantic rgb dark mode 1`] = `
+"/* Dark mode */
+.dark, .dark-theme {
+  --accent-bg: rgb(12 17 28);
+  --accent-bg-subtle: rgb(17 23 37);
+  --accent-bg-interactive: rgb(23 36 72);
+  --accent-bg-hover: rgb(29 46 97);
+  --accent-bg-active: rgb(37 57 116);
+  --accent-border-subtle: rgb(46 68 132);
+  --accent-border: rgb(55 80 151);
+  --accent-border-hover: rgb(65 94 177);
+  --accent-solid: rgb(62 99 221);
+  --accent-solid-hover: rgb(63 92 176);
+  --accent-text: rgb(147 180 255);
+  --accent-text-contrast: rgb(213 226 255);
+  --accent-abg: rgb(0 18 251 / 0.047);
+  --accent-abg-subtle: rgb(17 86 249 / 0.086);
+  --accent-abg-interactive: rgb(43 100 255 / 0.231);
+  --accent-abg-hover: rgb(53 103 255 / 0.337);
+  --accent-abg-active: rgb(65 113 253 / 0.420);
+  --accent-aborder-subtle: rgb(77 122 253 / 0.486);
+  --accent-aborder: rgb(85 129 255 / 0.565);
+  --accent-aborder-hover: rgb(88 131 254 / 0.675);
+  --accent-asolid: rgb(70 113 255 / 0.859);
+  --accent-asolid-hover: rgb(85 128 254 / 0.671);
+  --accent-atext: rgb(147 180 255);
+  --accent-atext-contrast: rgb(213 226 255);
+  --accent-p3-bg: oklch(17.8% 0.0247 267);
+  --accent-p3-bg-subtle: oklch(20.7% 0.0302 267);
+  --accent-p3-bg-interactive: oklch(27.1% 0.0693 267);
+  --accent-p3-bg-hover: oklch(31.8% 0.0931 267);
+  --accent-p3-bg-active: oklch(36.1% 0.1044 267);
+  --accent-p3-border-subtle: oklch(40.4% 0.1105 267);
+  --accent-p3-border: oklch(45% 0.1201 267);
+  --accent-p3-border-hover: oklch(50.3% 0.1371 267);
+  --accent-p3-solid: oklch(54.4% 0.191 267);
+  --accent-p3-solid-hover: oklch(49.7% 0.1371 267);
+  --accent-p3-text: oklch(77.7% 0.1232 267);
+  --accent-p3-text-contrast: oklch(91.1% 0.0428 267);
+  --gray-bg: rgb(17 17 17);
+  --gray-bg-subtle: rgb(25 25 25);
+  --gray-bg-interactive: rgb(34 34 34);
+  --gray-bg-hover: rgb(42 42 42);
+  --gray-bg-active: rgb(49 49 49);
+  --gray-border-subtle: rgb(58 58 58);
+  --gray-border: rgb(72 72 72);
+  --gray-border-hover: rgb(96 96 96);
+  --gray-solid: rgb(110 110 110);
+  --gray-solid-hover: rgb(124 124 124);
+  --gray-text: rgb(180 180 180);
+  --gray-text-contrast: rgb(238 238 238);
+  --gray-abg: rgb(0 0 0 / 0.000);
+  --gray-abg-subtle: rgb(255 255 255 / 0.035);
+  --gray-abg-interactive: rgb(255 255 255 / 0.071);
+  --gray-abg-hover: rgb(255 255 255 / 0.106);
+  --gray-abg-active: rgb(255 255 255 / 0.133);
+  --gray-aborder-subtle: rgb(255 255 255 / 0.173);
+  --gray-aborder: rgb(255 255 255 / 0.231);
+  --gray-aborder-hover: rgb(255 255 255 / 0.333);
+  --gray-asolid: rgb(255 255 255 / 0.392);
+  --gray-asolid-hover: rgb(255 255 255 / 0.451);
+  --gray-atext: rgb(255 255 255 / 0.686);
+  --gray-atext-contrast: rgb(255 255 255 / 0.929);
+  --accent-contrast: rgb(255 255 255);
+  --accent-surface: rgb(17 29 57 / 0.502);
+  --background: rgb(17 17 17);
 }"
 `;

@@ -1,7 +1,7 @@
-import { APPEARANCES, COLOR_SPACES_VALUES, DEFAULT_APPEARANCE, DEFAULT_EXPORT_COLOR_SPACE } from "../../constants";
+import { APPEARANCES, DEFAULT_APPEARANCE, DEFAULT_EXPORT_COLOR_SPACE } from "../../constants";
 import type { GeneratedPalette, Appearance, ColorSpace } from "../../interfaces";
 
-import { labels } from "./_shared";
+import { labels, themeComment } from "./_shared";
 import { formatColor } from "../colorConvert";
 import { withHash } from "../color";
 
@@ -9,27 +9,30 @@ export function buildTailwindV4(
   p: GeneratedPalette,
   semantic: boolean,
   colorSpace: ColorSpace = DEFAULT_EXPORT_COLOR_SPACE,
-  opacity = false,
   mode: Appearance = DEFAULT_APPEARANCE,
 ): string {
   const l = labels(semantic);
-  const lines: string[] = [`/* ${mode === APPEARANCES.dark ? "Dark" : "Light"} mode */`, "@theme {"];
-
   const fmt = (v: string) => formatColor(v, colorSpace, false);
   const varName = (suffix: string) => `--color-${suffix}`;
 
-  const pushVar = (cssVarName: string, value: string) => {
-    if (opacity && colorSpace !== COLOR_SPACES_VALUES.hex) {
-      lines.push(`  ${cssVarName}: ${colorSpace}(var(${cssVarName}) / <alpha-value>);`);
-    } else {
-      lines.push(`  ${cssVarName}: ${fmt(value)};`);
-    }
-  };
+  const themeLines: string[] = [];
+  const indent = mode === APPEARANCES.dark ? "    " : "  ";
+  const pushVar = (cssVarName: string, value: string) => themeLines.push(`${indent}${cssVarName}: ${fmt(value)};`);
 
   p.accentScale.forEach((v, i) => pushVar(varName(`accent-${l[i]}`), v));
-  p.accentScaleAlpha.forEach((v, i) => pushVar(varName(`accent-a${semantic ? l[i] : i + 1}`), v));
+  p.accentScaleAlpha.forEach((v, i) => pushVar(varName(`accent-a${l[i]}`), v));
+  p.accentScaleWideGamut.forEach((v, i) => themeLines.push(`${indent}${varName(`accent-p3-${l[i]}`)}: ${v};`));
+  pushVar(varName("accent-contrast"), p.accentContrast);
+  pushVar(varName("accent-surface"), p.accentSurface);
   p.grayScale.forEach((v, i) => pushVar(varName(`gray-${l[i]}`), v));
-  lines.push(`  ${varName("background")}: ${fmt(withHash(p.background))};`);
-  lines.push("}");
-  return lines.join("\n");
+  p.grayScaleAlpha.forEach((v, i) => pushVar(varName(`gray-a${l[i]}`), v));
+  themeLines.push(`${indent}${varName("background")}: ${fmt(withHash(p.background))};`);
+
+  const inner = themeLines.join("\n");
+
+  if (mode === APPEARANCES.dark) {
+    return [themeComment(mode), ".dark {", "  @theme {", inner, "  }", "}"].join("\n");
+  }
+
+  return [themeComment(mode), "@theme {", inner, "}"].join("\n");
 }

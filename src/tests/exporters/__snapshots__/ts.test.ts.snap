@@ -1,7 +1,9 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`buildTs > snapshot non-semantic hex 1`] = `
+exports[`buildTs > matches snapshot for non-semantic hex 1`] = `
 "// Light mode
+export const mode = 'light';
+
 export const accent = {
   '1': '#0c111c',
   '2': '#111725',
@@ -32,6 +34,21 @@ export const accentAlpha = {
   'a12': '#d5e2ff',
 };
 
+export const accentP3 = {
+  'p3-1': 'oklch(17.8% 0.0247 267)',
+  'p3-2': 'oklch(20.7% 0.0302 267)',
+  'p3-3': 'oklch(27.1% 0.0693 267)',
+  'p3-4': 'oklch(31.8% 0.0931 267)',
+  'p3-5': 'oklch(36.1% 0.1044 267)',
+  'p3-6': 'oklch(40.4% 0.1105 267)',
+  'p3-7': 'oklch(45% 0.1201 267)',
+  'p3-8': 'oklch(50.3% 0.1371 267)',
+  'p3-9': 'oklch(54.4% 0.191 267)',
+  'p3-10': 'oklch(49.7% 0.1371 267)',
+  'p3-11': 'oklch(77.7% 0.1232 267)',
+  'p3-12': 'oklch(91.1% 0.0428 267)',
+};
+
 export const gray = {
   '1': '#111111',
   '2': '#191919',
@@ -47,14 +64,31 @@ export const gray = {
   '12': '#eeeeee',
 };
 
+export const grayAlpha = {
+  'a1': '#00000000',
+  'a2': '#ffffff09',
+  'a3': '#ffffff12',
+  'a4': '#ffffff1b',
+  'a5': '#ffffff22',
+  'a6': '#ffffff2c',
+  'a7': '#ffffff3b',
+  'a8': '#ffffff55',
+  'a9': '#ffffff64',
+  'a10': '#ffffff73',
+  'a11': '#ffffffaf',
+  'a12': '#ffffffed',
+};
+
 export const accentContrast = '#ffffff';
 export const accentSurface = '#111d3980';
 export const background = '#111111';"
 `;
 
-exports[`buildTs > snapshot semantic hex 1`] = `
+exports[`buildTs > matches snapshot for semantic hex 1`] = `
 "// Light mode
-export const colors = {
+export const mode = 'light';
+
+export const accent = {
   'bg': '#0c111c',
   'bg-subtle': '#111725',
   'bg-interactive': '#172448',
@@ -84,6 +118,21 @@ export const accentAlpha = {
   'atext-contrast': '#d5e2ff',
 };
 
+export const accentP3 = {
+  'p3-bg': 'oklch(17.8% 0.0247 267)',
+  'p3-bg-subtle': 'oklch(20.7% 0.0302 267)',
+  'p3-bg-interactive': 'oklch(27.1% 0.0693 267)',
+  'p3-bg-hover': 'oklch(31.8% 0.0931 267)',
+  'p3-bg-active': 'oklch(36.1% 0.1044 267)',
+  'p3-border-subtle': 'oklch(40.4% 0.1105 267)',
+  'p3-border': 'oklch(45% 0.1201 267)',
+  'p3-border-hover': 'oklch(50.3% 0.1371 267)',
+  'p3-solid': 'oklch(54.4% 0.191 267)',
+  'p3-solid-hover': 'oklch(49.7% 0.1371 267)',
+  'p3-text': 'oklch(77.7% 0.1232 267)',
+  'p3-text-contrast': 'oklch(91.1% 0.0428 267)',
+};
+
 export const gray = {
   'bg': '#111111',
   'bg-subtle': '#191919',
@@ -97,6 +146,21 @@ export const gray = {
   'solid-hover': '#7c7c7c',
   'text': '#b4b4b4',
   'text-contrast': '#eeeeee',
+};
+
+export const grayAlpha = {
+  'abg': '#00000000',
+  'abg-subtle': '#ffffff09',
+  'abg-interactive': '#ffffff12',
+  'abg-hover': '#ffffff1b',
+  'abg-active': '#ffffff22',
+  'aborder-subtle': '#ffffff2c',
+  'aborder': '#ffffff3b',
+  'aborder-hover': '#ffffff55',
+  'asolid': '#ffffff64',
+  'asolid-hover': '#ffffff73',
+  'atext': '#ffffffaf',
+  'atext-contrast': '#ffffffed',
 };
 
 export const accentContrast = '#ffffff';

@@ -18,10 +18,19 @@ describe("buildTailwindV3 / structure", () => {
     expect(out).toMatch(/gray:\s*\{/);
   });
 
-  it("alpha scale lives inside the accent object, not its own", () => {
+  it("alpha scale and p3 scale live inside the accent object, not their own", () => {
     const out = buildTailwindV3(mockPalette, false);
     const accentBlock = out.slice(out.indexOf("accent:"), out.indexOf("gray:"));
+
     expect(accentBlock).toContain("a1:");
+    expect(accentBlock).toContain("'p3-1':");
+  });
+
+  it("exports contrast, surface, and background at the root colors level", () => {
+    const out = buildTailwindV3(mockPalette, false);
+    expect(out).toContain("'accent-contrast':");
+    expect(out).toContain("'accent-surface':");
+    expect(out).toContain("background:");
   });
 });
 
@@ -51,49 +60,72 @@ describe("buildTailwindV3 / semantic", () => {
   });
 });
 
-describe("buildTailwindV3 / raw mode", () => {
-  it("raw=false + rgb: formats color directly as rgb()", () => {
+describe("buildTailwindV3 / opacity mode", () => {
+  it("opacity=false + rgb: formats color directly as rgb()", () => {
     const out = buildTailwindV3(mockPalette, false, "rgb", false);
     expect(out).toMatch(/rgb\(/);
     expect(out).not.toContain("<alpha-value>");
     expect(out).not.toContain("var(--");
   });
 
-  it("raw=true + rgb: generates var() with <alpha-value> - unique to v3", () => {
+  it("opacity=true + rgb: emits var() pattern with <alpha-value> in single quotes", () => {
     const out = buildTailwindV3(mockPalette, false, "rgb", true);
-    expect(out).toContain("<alpha-value>");
-    expect(out).toMatch(/rgb\(var\(--accent-\d+\) \/ <alpha-value>\)/);
+    expect(out).toMatch(/'rgb\(var\(--accent-\d+\) \/ <alpha-value>\)'/);
   });
 
-  it("raw=true + hsl: same pattern with hsl()", () => {
+  it("opacity=true + hsl: same pattern with hsl()", () => {
     const out = buildTailwindV3(mockPalette, false, "hsl", true);
-    expect(out).toContain("<alpha-value>");
-    expect(out).toMatch(/hsl\(var\(--accent-\d+\) \/ <alpha-value>\)/);
+    expect(out).toMatch(/'hsl\(var\(--accent-\d+\) \/ <alpha-value>\)'/);
   });
 
-  it("raw=true + hex: has no effect - raw only applies to rgb/hsl in v3", () => {
-    const out = buildTailwindV3(mockPalette, false, "hex", true);
-    expect(out).toMatch(/: '#/);
-  });
-
-  it("raw=true + rgb + semantic=false: var name uses numeric index (--accent-1)", () => {
+  it("opacity=true + semantic=false: var name uses numeric index (--accent-1)", () => {
     const out = buildTailwindV3(mockPalette, false, "rgb", true);
     expect(out).toContain("var(--accent-1)");
-    expect(out).not.toContain("var(--color-bg)");
+    expect(out).not.toContain("var(--color-accent-bg)");
   });
 
-  it("raw=true + rgb + semantic=true: var name uses semantic label (--color-bg)", () => {
+  it("opacity=true + semantic=true: var name uses semantic label (--color-accent-bg)", () => {
     const out = buildTailwindV3(mockPalette, true, "rgb", true);
-    expect(out).toContain("var(--color-bg)");
+    expect(out).toContain("var(--color-accent-bg)");
     expect(out).not.toContain("var(--accent-1)");
   });
 
-  it("alpha scale does NOT use raw/var() even when raw=true - only main scale", () => {
+  it("alpha scale does NOT use <alpha-value> even when opacity=true because they are already transparent", () => {
     const out = buildTailwindV3(mockPalette, false, "rgb", true);
-    const alphaLine = out.split("\n").find((l) => l.includes("a1:"));
-    expect(alphaLine).toBeDefined();
-    expect(alphaLine).not.toContain("<alpha-value>");
-    expect(alphaLine).toMatch(/rgb\(/);
+    const alphaLines = out.split("\n").filter((l) => l.includes("a1:"));
+    expect(alphaLines.length).toBeGreaterThan(0);
+    alphaLines.forEach((line) => {
+      expect(line).not.toContain("<alpha-value>");
+    });
+  });
+
+  it("opacity=true: appends CSS companion block as a comment", () => {
+    const out = buildTailwindV3(mockPalette, false, "rgb", true);
+    expect(out).toContain("* @layer base {");
+    expect(out).toContain("CSS variables required for opacity support");
+  });
+
+  it("opacity=true: companion vars use raw channels without wrapper", () => {
+    const out = buildTailwindV3(mockPalette, false, "rgb", true);
+    expect(out).toMatch(/--accent-\d+: [\d.]+ [\d.]+ [\d.]+( \/ [\d.]+)?;/);
+  });
+
+  it("opacity=true + semantic: companion uses semantic var names", () => {
+    const out = buildTailwindV3(mockPalette, true, "rgb", true);
+    expect(out).toContain("--color-accent-bg:");
+    expect(out).not.toContain("--accent-1:");
+  });
+
+  it("opacity=true + oklch: emits oklch(var(...) / <alpha-value>)", () => {
+    const out = buildTailwindV3(mockPalette, false, "oklch", true);
+    expect(out).toMatch(/'oklch\(var\(--/);
+    expect(out).toContain("<alpha-value>");
+  });
+
+  it("opacity=false: no companion block appended", () => {
+    const out = buildTailwindV3(mockPalette, false, "rgb", false);
+    expect(out).not.toContain("@layer base");
+    expect(out).not.toContain("CSS variables required");
   });
 });
 

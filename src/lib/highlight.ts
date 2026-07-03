@@ -34,21 +34,22 @@ const TOKEN_STYLES: Record<string, string> = {
   property: "color:var(--gray-12)",
   variable: "color:var(--gray-12)",
   tag: "color:var(--accent-11)",
-  "token punctuation": "color:var(--gray-11)",
-  "token string-property": "color:var(--gray-12)",
-  "token constant": "color:var(--accent-9)",
+  "string-property": "color:var(--gray-12)",
+  constant: "color:var(--accent-9)",
 };
 
 export function applyStyles(html: string): string {
   return html.replace(
     /class="token ([^"]+)"/g,
     (_match, classes: string) => {
-      const clsList = classes.split(" ").filter(Boolean);
-      const styles: string[] = [];
-      for (const c of clsList) {
-        const style = TOKEN_STYLES[c] ?? TOKEN_STYLES[`token ${c}`];
-        if (style) styles.push(style);
-      }
+      const styles = classes
+        .split(" ")
+        .filter(Boolean)
+        .flatMap((c) => {
+          const style = TOKEN_STYLES[c];
+          return style ? [style] : [];
+        });
+
       if (styles.length === 0) return `class="token"`;
       return `class="token" style="${styles.join(";")}"`;
     },

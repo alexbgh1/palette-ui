@@ -24,10 +24,7 @@ export function useExportState(palette: GeneratedPalette, appearance: Appearance
   const supportsRaw =
     colorSpace !== COLOR_SPACES_VALUES.hex &&
     (format === EXPORT_FORMATS_VALUES.ts || format === EXPORT_FORMATS_VALUES.json);
-  const supportsOpacity =
-    colorSpace !== COLOR_SPACES_VALUES.hex &&
-    format !== EXPORT_FORMATS_VALUES.ts &&
-    format !== EXPORT_FORMATS_VALUES.json;
+  const supportsOpacity = colorSpace !== COLOR_SPACES_VALUES.hex && format === EXPORT_FORMATS_VALUES["tailwind-v3"];
 
   const handleRawChange = (v: boolean) => {
     setRawValues(v);
@@ -57,13 +54,13 @@ export function useExportState(palette: GeneratedPalette, appearance: Appearance
   const content = useMemo(() => {
     switch (format) {
       case "css":
-        return buildCss(palette, semantic, colorSpace, effectiveOpacity, appearance);
+        return buildCss(palette, semantic, colorSpace, appearance);
       case "scss":
-        return buildScss(palette, semantic, colorSpace, effectiveOpacity, appearance);
+        return buildScss(palette, semantic, colorSpace, appearance);
       case "tailwind-v3":
         return buildTailwindV3(palette, semantic, colorSpace, effectiveOpacity, appearance);
       case "tailwind-v4":
-        return buildTailwindV4(palette, semantic, colorSpace, effectiveOpacity, appearance);
+        return buildTailwindV4(palette, semantic, colorSpace, appearance);
       case "json":
         return buildJson(palette, colorSpace, effectiveRaw, appearance);
       case "ts":
@@ -76,7 +73,7 @@ export function useExportState(palette: GeneratedPalette, appearance: Appearance
   const previewContent = useMemo(() => {
     const lines = content.split("\n").slice(0, 4);
     let snippet = lines.join("\n");
-    if (content.split("\n").length > 4) snippet += "\n\u2026";
+    if (content.split("\n").length > 4) snippet += "...";
     return snippet;
   }, [content]);
 

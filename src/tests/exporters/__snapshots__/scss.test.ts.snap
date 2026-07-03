@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`buildScss > snapshot 1`] = `
-"// Light mode
+exports[`buildScss / snapshots > snapshot for non-semantic hex 1`] = `
+"/* Light mode */
 $accent-1: #0c111c;
 $accent-2: #111725;
 $accent-3: #172448;
@@ -26,6 +26,18 @@ $accent-a9: #4671ffdb;
 $accent-a10: #5580feab;
 $accent-a11: #93b4ff;
 $accent-a12: #d5e2ff;
+$accent-p3-1: oklch(17.8% 0.0247 267);
+$accent-p3-2: oklch(20.7% 0.0302 267);
+$accent-p3-3: oklch(27.1% 0.0693 267);
+$accent-p3-4: oklch(31.8% 0.0931 267);
+$accent-p3-5: oklch(36.1% 0.1044 267);
+$accent-p3-6: oklch(40.4% 0.1105 267);
+$accent-p3-7: oklch(45% 0.1201 267);
+$accent-p3-8: oklch(50.3% 0.1371 267);
+$accent-p3-9: oklch(54.4% 0.191 267);
+$accent-p3-10: oklch(49.7% 0.1371 267);
+$accent-p3-11: oklch(77.7% 0.1232 267);
+$accent-p3-12: oklch(91.1% 0.0428 267);
 $gray-1: #111111;
 $gray-2: #191919;
 $gray-3: #222222;
@@ -55,32 +67,44 @@ $accent-surface: #111d3980;
 $background: #111111;"
 `;
 
-exports[`buildScss > snapshot semantic 1`] = `
-"// Light mode
-$bg: #0c111c;
-$bg-subtle: #111725;
-$bg-interactive: #172448;
-$bg-hover: #1d2e61;
-$bg-active: #253974;
-$border-subtle: #2e4484;
-$border: #375097;
-$border-hover: #415eb1;
-$solid: #3e63dd;
-$solid-hover: #3f5cb0;
-$text: #93b4ff;
-$text-contrast: #d5e2ff;
-$abg: #0012fb0c;
-$abg-subtle: #1156f916;
-$abg-interactive: #2b64ff3b;
-$abg-hover: #3567ff56;
-$abg-active: #4171fd6b;
-$aborder-subtle: #4d7afd7c;
-$aborder: #5581ff90;
-$aborder-hover: #5883feac;
-$asolid: #4671ffdb;
-$asolid-hover: #5580feab;
-$atext: #93b4ff;
-$atext-contrast: #d5e2ff;
+exports[`buildScss / snapshots > snapshot for semantic hex in dark mode 1`] = `
+"/* Dark mode */
+$accent-bg: #0c111c;
+$accent-bg-subtle: #111725;
+$accent-bg-interactive: #172448;
+$accent-bg-hover: #1d2e61;
+$accent-bg-active: #253974;
+$accent-border-subtle: #2e4484;
+$accent-border: #375097;
+$accent-border-hover: #415eb1;
+$accent-solid: #3e63dd;
+$accent-solid-hover: #3f5cb0;
+$accent-text: #93b4ff;
+$accent-text-contrast: #d5e2ff;
+$accent-abg: #0012fb0c;
+$accent-abg-subtle: #1156f916;
+$accent-abg-interactive: #2b64ff3b;
+$accent-abg-hover: #3567ff56;
+$accent-abg-active: #4171fd6b;
+$accent-aborder-subtle: #4d7afd7c;
+$accent-aborder: #5581ff90;
+$accent-aborder-hover: #5883feac;
+$accent-asolid: #4671ffdb;
+$accent-asolid-hover: #5580feab;
+$accent-atext: #93b4ff;
+$accent-atext-contrast: #d5e2ff;
+$accent-p3-bg: oklch(17.8% 0.0247 267);
+$accent-p3-bg-subtle: oklch(20.7% 0.0302 267);
+$accent-p3-bg-interactive: oklch(27.1% 0.0693 267);
+$accent-p3-bg-hover: oklch(31.8% 0.0931 267);
+$accent-p3-bg-active: oklch(36.1% 0.1044 267);
+$accent-p3-border-subtle: oklch(40.4% 0.1105 267);
+$accent-p3-border: oklch(45% 0.1201 267);
+$accent-p3-border-hover: oklch(50.3% 0.1371 267);
+$accent-p3-solid: oklch(54.4% 0.191 267);
+$accent-p3-solid-hover: oklch(49.7% 0.1371 267);
+$accent-p3-text: oklch(77.7% 0.1232 267);
+$accent-p3-text-contrast: oklch(91.1% 0.0428 267);
 $gray-bg: #111111;
 $gray-bg-subtle: #191919;
 $gray-bg-interactive: #222222;
@@ -105,7 +129,7 @@ $gray-asolid: #ffffff64;
 $gray-asolid-hover: #ffffff73;
 $gray-atext: #ffffffaf;
 $gray-atext-contrast: #ffffffed;
-$contrast: #ffffff;
-$surface: #111d3980;
+$accent-contrast: #ffffff;
+$accent-surface: #111d3980;
 $background: #111111;"
 `;

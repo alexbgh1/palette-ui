@@ -31,7 +31,19 @@ module.exports = {
       a9: '#4671ffdb',
       a10: '#5580feab',
       a11: '#93b4ff',
-      a12: '#d5e2ff'
+      a12: '#d5e2ff',
+      'p3-1': 'oklch(17.8% 0.0247 267)',
+      'p3-2': 'oklch(20.7% 0.0302 267)',
+      'p3-3': 'oklch(27.1% 0.0693 267)',
+      'p3-4': 'oklch(31.8% 0.0931 267)',
+      'p3-5': 'oklch(36.1% 0.1044 267)',
+      'p3-6': 'oklch(40.4% 0.1105 267)',
+      'p3-7': 'oklch(45% 0.1201 267)',
+      'p3-8': 'oklch(50.3% 0.1371 267)',
+      'p3-9': 'oklch(54.4% 0.191 267)',
+      'p3-10': 'oklch(49.7% 0.1371 267)',
+      'p3-11': 'oklch(77.7% 0.1232 267)',
+      'p3-12': 'oklch(91.1% 0.0428 267)'
         },
         gray: {
       1: '#111111',
@@ -45,8 +57,22 @@ module.exports = {
       9: '#6e6e6e',
       10: '#7c7c7c',
       11: '#b4b4b4',
-      12: '#eeeeee'
+      12: '#eeeeee',
+      a1: '#00000000',
+      a2: '#ffffff09',
+      a3: '#ffffff12',
+      a4: '#ffffff1b',
+      a5: '#ffffff22',
+      a6: '#ffffff2c',
+      a7: '#ffffff3b',
+      a8: '#ffffff55',
+      a9: '#ffffff64',
+      a10: '#ffffff73',
+      a11: '#ffffffaf',
+      a12: '#ffffffed'
         },
+        'accent-contrast': '#ffffff',
+        'accent-surface': '#111d3980',
         background: '#111111',
       },
     },
@@ -62,18 +88,18 @@ module.exports = {
     extend: {
       colors: {
         accent: {
-      1: rgb(var(--accent-1) / <alpha-value>),
-      2: rgb(var(--accent-2) / <alpha-value>),
-      3: rgb(var(--accent-3) / <alpha-value>),
-      4: rgb(var(--accent-4) / <alpha-value>),
-      5: rgb(var(--accent-5) / <alpha-value>),
-      6: rgb(var(--accent-6) / <alpha-value>),
-      7: rgb(var(--accent-7) / <alpha-value>),
-      8: rgb(var(--accent-8) / <alpha-value>),
-      9: rgb(var(--accent-9) / <alpha-value>),
-      10: rgb(var(--accent-10) / <alpha-value>),
-      11: rgb(var(--accent-11) / <alpha-value>),
-      12: rgb(var(--accent-12) / <alpha-value>),
+      1: 'rgb(var(--accent-1) / <alpha-value>)',
+      2: 'rgb(var(--accent-2) / <alpha-value>)',
+      3: 'rgb(var(--accent-3) / <alpha-value>)',
+      4: 'rgb(var(--accent-4) / <alpha-value>)',
+      5: 'rgb(var(--accent-5) / <alpha-value>)',
+      6: 'rgb(var(--accent-6) / <alpha-value>)',
+      7: 'rgb(var(--accent-7) / <alpha-value>)',
+      8: 'rgb(var(--accent-8) / <alpha-value>)',
+      9: 'rgb(var(--accent-9) / <alpha-value>)',
+      10: 'rgb(var(--accent-10) / <alpha-value>)',
+      11: 'rgb(var(--accent-11) / <alpha-value>)',
+      12: 'rgb(var(--accent-12) / <alpha-value>)',
       a1: 'rgb(0 18 251 / 0.047)',
       a2: 'rgb(17 86 249 / 0.086)',
       a3: 'rgb(43 100 255 / 0.231)',
@@ -85,27 +111,114 @@ module.exports = {
       a9: 'rgb(70 113 255 / 0.859)',
       a10: 'rgb(85 128 254 / 0.671)',
       a11: 'rgb(147 180 255)',
-      a12: 'rgb(213 226 255)'
+      a12: 'rgb(213 226 255)',
+      'p3-1': 'oklch(17.8% 0.0247 267)',
+      'p3-2': 'oklch(20.7% 0.0302 267)',
+      'p3-3': 'oklch(27.1% 0.0693 267)',
+      'p3-4': 'oklch(31.8% 0.0931 267)',
+      'p3-5': 'oklch(36.1% 0.1044 267)',
+      'p3-6': 'oklch(40.4% 0.1105 267)',
+      'p3-7': 'oklch(45% 0.1201 267)',
+      'p3-8': 'oklch(50.3% 0.1371 267)',
+      'p3-9': 'oklch(54.4% 0.191 267)',
+      'p3-10': 'oklch(49.7% 0.1371 267)',
+      'p3-11': 'oklch(77.7% 0.1232 267)',
+      'p3-12': 'oklch(91.1% 0.0428 267)'
         },
         gray: {
-      1: rgb(var(--gray-1) / <alpha-value>),
-      2: rgb(var(--gray-2) / <alpha-value>),
-      3: rgb(var(--gray-3) / <alpha-value>),
-      4: rgb(var(--gray-4) / <alpha-value>),
-      5: rgb(var(--gray-5) / <alpha-value>),
-      6: rgb(var(--gray-6) / <alpha-value>),
-      7: rgb(var(--gray-7) / <alpha-value>),
-      8: rgb(var(--gray-8) / <alpha-value>),
-      9: rgb(var(--gray-9) / <alpha-value>),
-      10: rgb(var(--gray-10) / <alpha-value>),
-      11: rgb(var(--gray-11) / <alpha-value>),
-      12: rgb(var(--gray-12) / <alpha-value>)
+      1: 'rgb(var(--gray-1) / <alpha-value>)',
+      2: 'rgb(var(--gray-2) / <alpha-value>)',
+      3: 'rgb(var(--gray-3) / <alpha-value>)',
+      4: 'rgb(var(--gray-4) / <alpha-value>)',
+      5: 'rgb(var(--gray-5) / <alpha-value>)',
+      6: 'rgb(var(--gray-6) / <alpha-value>)',
+      7: 'rgb(var(--gray-7) / <alpha-value>)',
+      8: 'rgb(var(--gray-8) / <alpha-value>)',
+      9: 'rgb(var(--gray-9) / <alpha-value>)',
+      10: 'rgb(var(--gray-10) / <alpha-value>)',
+      11: 'rgb(var(--gray-11) / <alpha-value>)',
+      12: 'rgb(var(--gray-12) / <alpha-value>)',
+      a1: 'rgb(0 0 0 / 0.000)',
+      a2: 'rgb(255 255 255 / 0.035)',
+      a3: 'rgb(255 255 255 / 0.071)',
+      a4: 'rgb(255 255 255 / 0.106)',
+      a5: 'rgb(255 255 255 / 0.133)',
+      a6: 'rgb(255 255 255 / 0.173)',
+      a7: 'rgb(255 255 255 / 0.231)',
+      a8: 'rgb(255 255 255 / 0.333)',
+      a9: 'rgb(255 255 255 / 0.392)',
+      a10: 'rgb(255 255 255 / 0.451)',
+      a11: 'rgb(255 255 255 / 0.686)',
+      a12: 'rgb(255 255 255 / 0.929)'
         },
+        'accent-contrast': 'rgb(var(--accent-contrast) / <alpha-value>)',
+        'accent-surface': 'rgb(var(--accent-surface) / <alpha-value>)',
         background: 'rgb(17 17 17)',
       },
     },
   },
-};"
+};
+
+/*
+ * CSS variables required for opacity support.
+ * Add this to your globals.css:
+ *
+ * @layer base {
+ *   :root, .light, .light-theme {
+ *     --accent-1: 12 17 28;
+ *     --accent-2: 17 23 37;
+ *     --accent-3: 23 36 72;
+ *     --accent-4: 29 46 97;
+ *     --accent-5: 37 57 116;
+ *     --accent-6: 46 68 132;
+ *     --accent-7: 55 80 151;
+ *     --accent-8: 65 94 177;
+ *     --accent-9: 62 99 221;
+ *     --accent-10: 63 92 176;
+ *     --accent-11: 147 180 255;
+ *     --accent-12: 213 226 255;
+ *     --accent-a1: 0 18 251 / 0.047;
+ *     --accent-a2: 17 86 249 / 0.086;
+ *     --accent-a3: 43 100 255 / 0.231;
+ *     --accent-a4: 53 103 255 / 0.337;
+ *     --accent-a5: 65 113 253 / 0.420;
+ *     --accent-a6: 77 122 253 / 0.486;
+ *     --accent-a7: 85 129 255 / 0.565;
+ *     --accent-a8: 88 131 254 / 0.675;
+ *     --accent-a9: 70 113 255 / 0.859;
+ *     --accent-a10: 85 128 254 / 0.671;
+ *     --accent-a11: 147 180 255;
+ *     --accent-a12: 213 226 255;
+ *     --gray-1: 17 17 17;
+ *     --gray-2: 25 25 25;
+ *     --gray-3: 34 34 34;
+ *     --gray-4: 42 42 42;
+ *     --gray-5: 49 49 49;
+ *     --gray-6: 58 58 58;
+ *     --gray-7: 72 72 72;
+ *     --gray-8: 96 96 96;
+ *     --gray-9: 110 110 110;
+ *     --gray-10: 124 124 124;
+ *     --gray-11: 180 180 180;
+ *     --gray-12: 238 238 238;
+ *     --gray-a1: 0 0 0 / 0.000;
+ *     --gray-a2: 255 255 255 / 0.035;
+ *     --gray-a3: 255 255 255 / 0.071;
+ *     --gray-a4: 255 255 255 / 0.106;
+ *     --gray-a5: 255 255 255 / 0.133;
+ *     --gray-a6: 255 255 255 / 0.173;
+ *     --gray-a7: 255 255 255 / 0.231;
+ *     --gray-a8: 255 255 255 / 0.333;
+ *     --gray-a9: 255 255 255 / 0.392;
+ *     --gray-a10: 255 255 255 / 0.451;
+ *     --gray-a11: 255 255 255 / 0.686;
+ *     --gray-a12: 255 255 255 / 0.929;
+ *     --accent-contrast: 255 255 255;
+ *     --accent-surface: 17 29 57 / 0.502;
+ *     --background: 17 17 17;
+ *   }
+ * }
+ */"
 `;
 
 exports[`buildTailwindV3 / snapshots > semantic hex 1`] = `
@@ -139,7 +252,19 @@ module.exports = {
       asolid: '#4671ffdb',
       'asolid-hover': '#5580feab',
       atext: '#93b4ff',
-      'atext-contrast': '#d5e2ff'
+      'atext-contrast': '#d5e2ff',
+      'p3-bg': 'oklch(17.8% 0.0247 267)',
+      'p3-bg-subtle': 'oklch(20.7% 0.0302 267)',
+      'p3-bg-interactive': 'oklch(27.1% 0.0693 267)',
+      'p3-bg-hover': 'oklch(31.8% 0.0931 267)',
+      'p3-bg-active': 'oklch(36.1% 0.1044 267)',
+      'p3-border-subtle': 'oklch(40.4% 0.1105 267)',
+      'p3-border': 'oklch(45% 0.1201 267)',
+      'p3-border-hover': 'oklch(50.3% 0.1371 267)',
+      'p3-solid': 'oklch(54.4% 0.191 267)',
+      'p3-solid-hover': 'oklch(49.7% 0.1371 267)',
+      'p3-text': 'oklch(77.7% 0.1232 267)',
+      'p3-text-contrast': 'oklch(91.1% 0.0428 267)'
         },
         gray: {
       bg: '#111111',
@@ -153,8 +278,22 @@ module.exports = {
       solid: '#6e6e6e',
       'solid-hover': '#7c7c7c',
       text: '#b4b4b4',
-      'text-contrast': '#eeeeee'
+      'text-contrast': '#eeeeee',
+      abg: '#00000000',
+      'abg-subtle': '#ffffff09',
+      'abg-interactive': '#ffffff12',
+      'abg-hover': '#ffffff1b',
+      'abg-active': '#ffffff22',
+      'aborder-subtle': '#ffffff2c',
+      aborder: '#ffffff3b',
+      'aborder-hover': '#ffffff55',
+      asolid: '#ffffff64',
+      'asolid-hover': '#ffffff73',
+      atext: '#ffffffaf',
+      'atext-contrast': '#ffffffed'
         },
+        'accent-contrast': '#ffffff',
+        'accent-surface': '#111d3980',
         background: '#111111',
       },
     },
@@ -170,18 +309,18 @@ module.exports = {
     extend: {
       colors: {
         accent: {
-      bg: rgb(var(--color-bg) / <alpha-value>),
-      'bg-subtle': rgb(var(--color-bg-subtle) / <alpha-value>),
-      'bg-interactive': rgb(var(--color-bg-interactive) / <alpha-value>),
-      'bg-hover': rgb(var(--color-bg-hover) / <alpha-value>),
-      'bg-active': rgb(var(--color-bg-active) / <alpha-value>),
-      'border-subtle': rgb(var(--color-border-subtle) / <alpha-value>),
-      border: rgb(var(--color-border) / <alpha-value>),
-      'border-hover': rgb(var(--color-border-hover) / <alpha-value>),
-      solid: rgb(var(--color-solid) / <alpha-value>),
-      'solid-hover': rgb(var(--color-solid-hover) / <alpha-value>),
-      text: rgb(var(--color-text) / <alpha-value>),
-      'text-contrast': rgb(var(--color-text-contrast) / <alpha-value>),
+      bg: 'rgb(var(--color-accent-bg) / <alpha-value>)',
+      'bg-subtle': 'rgb(var(--color-accent-bg-subtle) / <alpha-value>)',
+      'bg-interactive': 'rgb(var(--color-accent-bg-interactive) / <alpha-value>)',
+      'bg-hover': 'rgb(var(--color-accent-bg-hover) / <alpha-value>)',
+      'bg-active': 'rgb(var(--color-accent-bg-active) / <alpha-value>)',
+      'border-subtle': 'rgb(var(--color-accent-border-subtle) / <alpha-value>)',
+      border: 'rgb(var(--color-accent-border) / <alpha-value>)',
+      'border-hover': 'rgb(var(--color-accent-border-hover) / <alpha-value>)',
+      solid: 'rgb(var(--color-accent-solid) / <alpha-value>)',
+      'solid-hover': 'rgb(var(--color-accent-solid-hover) / <alpha-value>)',
+      text: 'rgb(var(--color-accent-text) / <alpha-value>)',
+      'text-contrast': 'rgb(var(--color-accent-text-contrast) / <alpha-value>)',
       abg: 'rgb(0 18 251 / 0.047)',
       'abg-subtle': 'rgb(17 86 249 / 0.086)',
       'abg-interactive': 'rgb(43 100 255 / 0.231)',
@@ -193,25 +332,112 @@ module.exports = {
       asolid: 'rgb(70 113 255 / 0.859)',
       'asolid-hover': 'rgb(85 128 254 / 0.671)',
       atext: 'rgb(147 180 255)',
-      'atext-contrast': 'rgb(213 226 255)'
+      'atext-contrast': 'rgb(213 226 255)',
+      'p3-bg': 'oklch(17.8% 0.0247 267)',
+      'p3-bg-subtle': 'oklch(20.7% 0.0302 267)',
+      'p3-bg-interactive': 'oklch(27.1% 0.0693 267)',
+      'p3-bg-hover': 'oklch(31.8% 0.0931 267)',
+      'p3-bg-active': 'oklch(36.1% 0.1044 267)',
+      'p3-border-subtle': 'oklch(40.4% 0.1105 267)',
+      'p3-border': 'oklch(45% 0.1201 267)',
+      'p3-border-hover': 'oklch(50.3% 0.1371 267)',
+      'p3-solid': 'oklch(54.4% 0.191 267)',
+      'p3-solid-hover': 'oklch(49.7% 0.1371 267)',
+      'p3-text': 'oklch(77.7% 0.1232 267)',
+      'p3-text-contrast': 'oklch(91.1% 0.0428 267)'
         },
         gray: {
-      bg: rgb(var(--gray-1) / <alpha-value>),
-      'bg-subtle': rgb(var(--gray-2) / <alpha-value>),
-      'bg-interactive': rgb(var(--gray-3) / <alpha-value>),
-      'bg-hover': rgb(var(--gray-4) / <alpha-value>),
-      'bg-active': rgb(var(--gray-5) / <alpha-value>),
-      'border-subtle': rgb(var(--gray-6) / <alpha-value>),
-      border: rgb(var(--gray-7) / <alpha-value>),
-      'border-hover': rgb(var(--gray-8) / <alpha-value>),
-      solid: rgb(var(--gray-9) / <alpha-value>),
-      'solid-hover': rgb(var(--gray-10) / <alpha-value>),
-      text: rgb(var(--gray-11) / <alpha-value>),
-      'text-contrast': rgb(var(--gray-12) / <alpha-value>)
+      bg: 'rgb(var(--color-gray-bg) / <alpha-value>)',
+      'bg-subtle': 'rgb(var(--color-gray-bg-subtle) / <alpha-value>)',
+      'bg-interactive': 'rgb(var(--color-gray-bg-interactive) / <alpha-value>)',
+      'bg-hover': 'rgb(var(--color-gray-bg-hover) / <alpha-value>)',
+      'bg-active': 'rgb(var(--color-gray-bg-active) / <alpha-value>)',
+      'border-subtle': 'rgb(var(--color-gray-border-subtle) / <alpha-value>)',
+      border: 'rgb(var(--color-gray-border) / <alpha-value>)',
+      'border-hover': 'rgb(var(--color-gray-border-hover) / <alpha-value>)',
+      solid: 'rgb(var(--color-gray-solid) / <alpha-value>)',
+      'solid-hover': 'rgb(var(--color-gray-solid-hover) / <alpha-value>)',
+      text: 'rgb(var(--color-gray-text) / <alpha-value>)',
+      'text-contrast': 'rgb(var(--color-gray-text-contrast) / <alpha-value>)',
+      abg: 'rgb(0 0 0 / 0.000)',
+      'abg-subtle': 'rgb(255 255 255 / 0.035)',
+      'abg-interactive': 'rgb(255 255 255 / 0.071)',
+      'abg-hover': 'rgb(255 255 255 / 0.106)',
+      'abg-active': 'rgb(255 255 255 / 0.133)',
+      'aborder-subtle': 'rgb(255 255 255 / 0.173)',
+      aborder: 'rgb(255 255 255 / 0.231)',
+      'aborder-hover': 'rgb(255 255 255 / 0.333)',
+      asolid: 'rgb(255 255 255 / 0.392)',
+      'asolid-hover': 'rgb(255 255 255 / 0.451)',
+      atext: 'rgb(255 255 255 / 0.686)',
+      'atext-contrast': 'rgb(255 255 255 / 0.929)'
         },
+        'accent-contrast': 'rgb(var(--accent-contrast) / <alpha-value>)',
+        'accent-surface': 'rgb(var(--accent-surface) / <alpha-value>)',
         background: 'rgb(17 17 17)',
       },
     },
   },
-};"
+};
+
+/*
+ * CSS variables required for opacity support.
+ * Add this to your globals.css:
+ *
+ * @layer base {
+ *   :root, .light, .light-theme {
+ *     --color-accent-bg: 12 17 28;
+ *     --color-accent-bg-subtle: 17 23 37;
+ *     --color-accent-bg-interactive: 23 36 72;
+ *     --color-accent-bg-hover: 29 46 97;
+ *     --color-accent-bg-active: 37 57 116;
+ *     --color-accent-border-subtle: 46 68 132;
+ *     --color-accent-border: 55 80 151;
+ *     --color-accent-border-hover: 65 94 177;
+ *     --color-accent-solid: 62 99 221;
+ *     --color-accent-solid-hover: 63 92 176;
+ *     --color-accent-text: 147 180 255;
+ *     --color-accent-text-contrast: 213 226 255;
+ *     --color-accent-abg: 0 18 251 / 0.047;
+ *     --color-accent-abg-subtle: 17 86 249 / 0.086;
+ *     --color-accent-abg-interactive: 43 100 255 / 0.231;
+ *     --color-accent-abg-hover: 53 103 255 / 0.337;
+ *     --color-accent-abg-active: 65 113 253 / 0.420;
+ *     --color-accent-aborder-subtle: 77 122 253 / 0.486;
+ *     --color-accent-aborder: 85 129 255 / 0.565;
+ *     --color-accent-aborder-hover: 88 131 254 / 0.675;
+ *     --color-accent-asolid: 70 113 255 / 0.859;
+ *     --color-accent-asolid-hover: 85 128 254 / 0.671;
+ *     --color-accent-atext: 147 180 255;
+ *     --color-accent-atext-contrast: 213 226 255;
+ *     --color-gray-bg: 17 17 17;
+ *     --color-gray-bg-subtle: 25 25 25;
+ *     --color-gray-bg-interactive: 34 34 34;
+ *     --color-gray-bg-hover: 42 42 42;
+ *     --color-gray-bg-active: 49 49 49;
+ *     --color-gray-border-subtle: 58 58 58;
+ *     --color-gray-border: 72 72 72;
+ *     --color-gray-border-hover: 96 96 96;
+ *     --color-gray-solid: 110 110 110;
+ *     --color-gray-solid-hover: 124 124 124;
+ *     --color-gray-text: 180 180 180;
+ *     --color-gray-text-contrast: 238 238 238;
+ *     --color-gray-abg: 0 0 0 / 0.000;
+ *     --color-gray-abg-subtle: 255 255 255 / 0.035;
+ *     --color-gray-abg-interactive: 255 255 255 / 0.071;
+ *     --color-gray-abg-hover: 255 255 255 / 0.106;
+ *     --color-gray-abg-active: 255 255 255 / 0.133;
+ *     --color-gray-aborder-subtle: 255 255 255 / 0.173;
+ *     --color-gray-aborder: 255 255 255 / 0.231;
+ *     --color-gray-aborder-hover: 255 255 255 / 0.333;
+ *     --color-gray-asolid: 255 255 255 / 0.392;
+ *     --color-gray-asolid-hover: 255 255 255 / 0.451;
+ *     --color-gray-atext: 255 255 255 / 0.686;
+ *     --color-gray-atext-contrast: 255 255 255 / 0.929;
+ *     --accent-contrast: 255 255 255;
+ *     --accent-surface: 17 29 57 / 0.502;
+ *     --color-background: 17 17 17;
+ *   }
+ * }
+ */"
 `;
