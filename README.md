@@ -60,8 +60,3 @@ npm run dev
 npm run build
 ```
 
-## TODO:
-
-- [ ] Fix export Tailwind v3 and v4 (alphas): Right now it doesn't make sense
-- [ ] Fix export tests based on previous task
-- [ ] Github Actions to deploy to Github Pages
