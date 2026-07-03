@@ -11,10 +11,15 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+
       - name: Install and Build
+        env:
+          VITE_GOOGLE_VERIFICATION: ${{ vars.VITE_GOOGLE_VERIFICATION }}
+          VITE_GTAG_ID: ${{ vars.VITE_GTAG_ID }}
         run: |
           npm install
           npm run build
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
